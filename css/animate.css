@@ -1,0 +1,47 @@
+#monster-1-hand {
+    animation: monster-1-hand 1s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes monster-1-hand{
+    0%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+    25%{
+        transform: rotateZ(-10deg) translateY(10%);
+    }
+    50%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+    75%{
+        transform: rotateZ(10deg) translateY(-10%);
+    }
+    100%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+}
+
+#monster-1-eye{
+    animation: monster-1-eye 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes monster-1-eye{
+    0%{
+        transform: translateX(10%);
+    }
+    25%{
+        transform: translateX(20%);
+    }
+    50%{
+        transform:translateX(50%);
+    }
+    75%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform:translateX(10%);
+    }
+}

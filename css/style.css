@@ -15,12 +15,11 @@ body{
 }
 
 header{
+    padding-top: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ff6363;
-    height: 90vh;
 }
 
 main{
@@ -47,12 +46,11 @@ main{
 }
 
 .cake{
-    width: 60%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     background-color: white;
-    flex: 3;
+    flex: 1;
     border-radius: 50px;
 }
 
