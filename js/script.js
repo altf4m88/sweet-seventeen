@@ -20,32 +20,11 @@ camera.position.setX(0);
 
 renderer.render(scene, camera);
 
-//background
-const grayBackground = new THREE.TextureLoader().load('./img/gray.jpg');
 scene.background = new THREE.Color(0xdddddd)
-
-//lightning
-// let light = new THREE.PointLight( 0xffffcc, 20, 1000 );
-// light.position.set( 15, 15, -30 );
-// scene.add( light );
-
-// const sphereSize = 1;
-// const pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
-// scene.add( pointLightHelper );
-
-// let light2 = new THREE.AmbientLight( 0x20202A, 10, 300 );
-// light2.position.set( 10, 30, 50 );
-// scene.add( light2 );
 
 let hemisphereLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
 
 scene.add(hemisphereLight);
-
-// const helper = new THREE.HemisphereLightHelper( hemisphereLight, 5 );
-// scene.add( helper );
-
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(gridHelper)
 
 let spotLight = new THREE.SpotLight(0xffa95c, 6);
 spotLight.position.set(-50,50,50);
@@ -54,9 +33,6 @@ spotLight.shadow.bias = -0.0001;
 spotLight.shadow.mapSize.width = 1024*4;
 spotLight.shadow.mapSize.height = 1024*4;
 scene.add(spotLight);
-
-// const spotLightHelper = new THREE.SpotLightHelper( spotLight );
-// scene.add( spotLightHelper );
 
 let loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
@@ -120,7 +96,6 @@ let bloom = new POSTPROCESSING.BloomEffect();
 bloom.intensity = 1.5;
 bloom.luminanceThreshold = 0.5
 bloom.luminanceSmoothing = 0
-// bloom.kernelSize = 0.5
 
 const effectPass = new POSTPROCESSING.EffectPass(
     camera,
@@ -147,17 +122,12 @@ function animate() {
     composer.render();
     requestAnimationFrame(animate);
 
-    // hearts.forEach((object) => {
-    //     object.rotation.y += 0.025;
-    // });
-
     spotLight.position.set(
         camera.position.x + 10,
         camera.position.y + 10,
         camera.position.z + 10,
     )
     controls.update()
-    // renderer.render(scene, camera);
 }
 
 animate();
