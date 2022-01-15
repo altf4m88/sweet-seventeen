@@ -45,3 +45,102 @@
         transform:translateX(10%);
     }
 }
+
+#monster-2-right-hand {
+    animation: monster-2-right-hand 1s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes monster-2-right-hand{
+    0%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+    25%{
+        transform: rotateZ(5deg) translateY(-5%);
+    }
+    50%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+    75%{
+        transform: rotateZ(-5deg) translateY(5%);
+    }
+    100%{
+        transform: rotateZ(0deg) translateY(0);
+    }
+}
+
+#monster-2-left-hand {
+    animation: monster-1-hand 1.3s infinite linear 0.5s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#monster-2-mouth {
+    animation: monster-2-mouth 1.5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes monster-2-mouth{
+    0%{
+        transform: translateX(5%) translateY(0);
+    }
+    25%{
+        transform: translateX(10%) translateY(-5%);
+    }
+    50%{
+        transform: translateX(15%) translateY(-5%);
+    }
+    75%{
+        transform: translateX(15%) translateY(-5%);
+    }
+    100%{
+        transform: translateX(5%) translateY(0%);
+    }
+}
+
+#monster-3 {
+    animation: jump 1s infinite ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes jump {
+    0%   { 
+        transform: scale(1,1) translateY(0); 
+    }
+    10%  { 
+        transform: scale(1.1,.9) translateY(0); 
+    }
+    50%  { 
+        transform: scale(1,1) translateY(-50px); 
+    }
+    100% { 
+        transform: scale(1,1) translateY(0); 
+    }
+}
+
+#monster-3-eye {
+    animation: monster-3-eye 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes monster-3-eye{
+    0%{
+        transform: translateX(10%) translateY(5%);
+    }
+    25%{
+        transform: translateX(20%) translateY(15%);
+    }
+    50%{
+        transform:translateX(50%) translateY(25%);
+    }
+    75%{
+        transform: translateX(50%) translateY(25%);
+    }
+    100%{
+        transform:translateX(10%) translateY(5%);
+    }
+}
