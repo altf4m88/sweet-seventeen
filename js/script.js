@@ -36,7 +36,7 @@ scene.add(spotLight);
 
 let loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
-loader.load( '../models/cake_3d/scene.gltf', function ( data ) {
+loader.load( 'models/cake_3d/scene.gltf', function ( data ) {
     var object = data.scene;
     object.position.set(0, 5, 0);
     object.rotation.set(Math.PI / 15, 11, -0.4);
@@ -52,7 +52,7 @@ loader.load( '../models/cake_3d/scene.gltf', function ( data ) {
 });
 
 const loadHeart = () => {
-    loader.load( '../models/low_poly_spinning_heart/scene.gltf', function ( data ) {
+    loader.load( 'models/low_poly_spinning_heart/scene.gltf', function ( data ) {
         let object = data.scene;
     
         object.traverse(n => { if ( n.isMesh ) {
